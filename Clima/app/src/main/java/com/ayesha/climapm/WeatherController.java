@@ -30,7 +30,6 @@ import cz.msebera.android.httpclient.Header;
 
  public class WeatherController extends AppCompatActivity {
 
-    // Constants:
     final int REQUEST_CODE = 12;
     final String WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather";
     // App ID to use OpenWeather data
@@ -40,7 +39,6 @@ import cz.msebera.android.httpclient.Header;
     // Distance between location updates (1000m or 1km)
     final float MIN_DISTANCE = 1000;
 
-    // TODO: Set LOCATION_PROVIDER here:
     String LOCATION_PROVIDER = LocationManager.GPS_PROVIDER;
     LocationManager mLocationManager;
     LocationListener mLocationListener;
@@ -51,7 +49,6 @@ import cz.msebera.android.httpclient.Header;
     ImageView mWeatherImage;
     TextView mTemperatureLabel;
 
-    // TODO: Declare a LocationManager and a LocationListener here:
 
 
     @Override
@@ -73,12 +70,10 @@ import cz.msebera.android.httpclient.Header;
             }
         });
 
-        // TODO: Add an OnClickListener to the changeCityButton here:
 
     }
 
 
-    // TODO: Add onResume() here:
 
     @Override
     protected void onResume() {
@@ -158,13 +153,9 @@ import cz.msebera.android.httpclient.Header;
 
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+
+
+
             ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
             return;
         }
@@ -227,7 +218,7 @@ import cz.msebera.android.httpclient.Header;
 
 
 
-  //to free up space when the app is not running  onPause method is called
+  ///To free up space when the app is not running  onPause method is called
 
      @Override
      protected void onPause() {

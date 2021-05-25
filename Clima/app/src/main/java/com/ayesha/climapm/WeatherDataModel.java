@@ -5,7 +5,6 @@ import org.json.JSONObject;
 
 public class WeatherDataModel {
 
-    // TODO: Declare the member variables here
     private String mTemperature;
     private String mCity;
     private String mIconName;
@@ -17,7 +16,6 @@ public class WeatherDataModel {
 
 
 
-    // TODO: Create a WeatherDataModel from a JSON:
        public static WeatherDataModel fromJson(JSONObject jsonObject){
            try {
 
@@ -40,7 +38,6 @@ public class WeatherDataModel {
        }
 
 
-    // TODO: Uncomment to this to get the weather image name from the condition:
     private static String updateWeatherIcon(int condition) {
 
         if (condition >= 0 && condition < 300) {
@@ -72,7 +69,6 @@ public class WeatherDataModel {
         return "dunno";
     }
 
-    // TODO: Create getter methods for temperature, city, and icon name:
 
 
     public String getTemperature() {
